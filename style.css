@@ -183,6 +183,11 @@ header { display: flex; justify-content: space-between; align-items: center; pad
 .philosophy-text { font-size: 19px; color: var(--sub-text); line-height: 1.9; word-break: keep-all; display: flex; flex-direction: column; align-items: center;}
 .philosophy-text strong { color: var(--main-text); font-weight: 800; font-size: 30px; display: block; margin-bottom: 0px; line-height: 1.4; letter-spacing: -1px;}
 
+.philosophy-detail-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 24px; margin-top: 30px; }
+.philosophy-detail-item { background-color: var(--box-bg); padding: 32px; border-radius: 16px; box-shadow: 0 10px 25px rgba(0,0,0,0.05); }
+.philosophy-detail-title { color: var(--main-orange); font-size: 19px; font-weight: 800; margin: 0 0 12px 0; letter-spacing: -0.5px; }
+.philosophy-detail-item p { color: var(--sub-text); font-size: 15px; line-height: 1.75; margin: 0; word-break: keep-all; }
+
 .doctor-profile { display: flex; gap: 50px; background-color: var(--box-bg); padding: 50px; border-radius: 30px; box-shadow: 0 15px 40px rgba(0,0,0,0.06); margin-bottom: 30px; align-items: center; transition: 0.3s; }
 .doctor-img-box { width: 300px; flex-shrink: 0; }
 .doctor-img-box img { width: 100%; aspect-ratio: 3/4; object-fit: cover; border-radius: 20px; background-color: var(--img-bg); }
@@ -309,7 +314,11 @@ footer { background-color: var(--footer-bg); padding: 60px 0 40px 0; color: var(
     /* 치료 철학 박스 내부 최적화 */
     .philosophy-box { padding: 10vw 5vw !important; }
     .philosophy-text strong { font-size: 5.8vw !important; line-height: 1.4 !important; }
-    .philosophy-text > div { text-align: center !important; font-size: 4vw !important; line-height: 1.8; padding: 0 3vw; margin-top: 8vw !important; word-break: keep-all; }
+    .philosophy-text > p { text-align: center !important; font-size: 4vw !important; line-height: 1.8; padding: 0 3vw; margin-top: 8vw !important; word-break: keep-all; }
+    .philosophy-detail-grid { grid-template-columns: 1fr; gap: 4vw; }
+    .philosophy-detail-item { padding: 6vw 5vw; }
+    .philosophy-detail-title { font-size: 4.5vw !important; }
+    .philosophy-detail-item p { font-size: 3.8vw !important; line-height: 1.75 !important; }
 
     /* 이미지 원본 비율 그대로 100% 다 보이게 설정 (잘림 없음) */
     .img-box, .style-1, .style-2 {
