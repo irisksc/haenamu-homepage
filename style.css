@@ -188,6 +188,10 @@ header { display: flex; justify-content: space-between; align-items: center; pad
 .philosophy-detail-title { color: var(--main-orange); font-size: 19px; font-weight: 800; margin: 0 0 12px 0; letter-spacing: -0.5px; }
 .philosophy-detail-item p { color: var(--sub-text); font-size: 15px; line-height: 1.75; margin: 0; word-break: keep-all; }
 
+.reason-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
+.ultrasound-image-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 24px; }
+.ultrasound-image-grid img { width: 100%; height: auto; display: block; box-shadow: 0 10px 25px rgba(0,0,0,0.08); }
+
 .doctor-profile { display: flex; gap: 50px; background-color: var(--box-bg); padding: 50px; border-radius: 30px; box-shadow: 0 15px 40px rgba(0,0,0,0.06); margin-bottom: 30px; align-items: center; transition: 0.3s; }
 .doctor-img-box { width: 300px; flex-shrink: 0; }
 .doctor-img-box img { width: 100%; aspect-ratio: 3/4; object-fit: cover; border-radius: 20px; background-color: var(--img-bg); }
@@ -319,6 +323,8 @@ footer { background-color: var(--footer-bg); padding: 60px 0 40px 0; color: var(
     .philosophy-detail-item { padding: 6vw 5vw; }
     .philosophy-detail-title { font-size: 4.5vw !important; }
     .philosophy-detail-item p { font-size: 3.8vw !important; line-height: 1.75 !important; }
+    .reason-grid { grid-template-columns: 1fr; gap: 4vw; }
+    .ultrasound-image-grid { grid-template-columns: 1fr; gap: 4vw; }
 
     /* 이미지 원본 비율 그대로 100% 다 보이게 설정 (잘림 없음) */
     .img-box, .style-1, .style-2 {
