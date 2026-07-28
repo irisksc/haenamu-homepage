@@ -186,7 +186,7 @@ header { display: flex; justify-content: space-between; align-items: center; pad
 .philosophy-detail-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 24px; margin-top: 30px; }
 .philosophy-detail-item { background-color: var(--box-bg); padding: 32px; border-radius: 16px; box-shadow: 0 10px 25px rgba(0,0,0,0.05); }
 .philosophy-detail-title { color: var(--main-orange); font-size: 19px; font-weight: 800; margin: 0 0 12px 0; letter-spacing: -0.5px; }
-.philosophy-detail-item p { color: var(--sub-text); font-size: 15px; line-height: 1.75; margin: 0; word-break: keep-all; text-align: justify; text-align-last: left; }
+.philosophy-detail-item p { color: var(--sub-text); font-size: 16px; line-height: 1.9; margin: 0; word-break: keep-all; }
 
 .reason-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
 
