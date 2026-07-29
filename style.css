@@ -58,6 +58,10 @@ header { display: flex; justify-content: space-between; align-items: center; pad
 .logo-area { display: flex; align-items: center; gap: 12px; font-size: 28px; color: var(--main-text); text-decoration: none; font-family: 'GangwonEdu_OTFBoldA', sans-serif; }
 .logo-area img { height: 65px; transform: translateY(-4px); }
 
+.main-nav { display: flex; align-items: center; gap: 8px; }
+.main-nav a { color: var(--main-text); text-decoration: none; font-size: 16px; font-weight: 700; padding: 10px 18px; border-radius: 30px; transition: 0.3s; }
+.main-nav a:hover, .main-nav a.active { background-color: rgba(230, 138, 0, 0.1); color: var(--main-orange); }
+
 .header-btn { background-color: #03C75A; color: #fff; border: none; padding: 12px 28px; border-radius: 30px; font-weight: 800; font-size: 16px; cursor: pointer; transition: 0.3s; }
 .header-btn:hover { background-color: #02b350; }
 
@@ -365,6 +369,7 @@ footer { background-color: var(--footer-bg); padding: 60px 0 40px 0; color: var(
     header { padding: 0 5vw; height: 18vw; flex-direction: column; justify-content: center; }
     .logo-area { font-size: 6vw; gap: 2vw; }
     .logo-area img { height: 10vw; transform: none; }
+    .main-nav { display: none; }
     .header-btn { display: none; }
 
     .page-header { padding: 6vw 5vw; margin-bottom: 6vw; word-break: keep-all; }
