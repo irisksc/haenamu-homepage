@@ -117,10 +117,12 @@ header { display: flex; justify-content: space-between; align-items: center; pad
 .hero-text h1 span { color: var(--bright-orange); }
 .hero-text p.description { font-size: 20px; font-weight: 400; line-height: 1.6; margin-bottom: 40px; color: var(--sub-text); }
 
-.time-text-highlight { margin-top: 50px; display: flex; flex-direction: column; align-items: center; gap: 12px; }
-.time-text-highlight strong { font-size: 45px; color: var(--bright-orange); font-weight: 800; letter-spacing: -1.5px; }
-.time-text-highlight p { margin: 0; font-size: 30px; color: var(--main-text); font-weight: 700; word-break: keep-all; line-height: 1.4; }
-.time-text-highlight p .highlight-orange { color: var(--bright-orange); }
+.hours-summary { margin: 50px auto 0 auto; max-width: 360px; background-color: var(--box-bg); border-radius: 16px; box-shadow: 0 10px 30px rgba(0,0,0,0.06); overflow: hidden; }
+.hours-summary-row { display: flex; align-items: center; justify-content: space-between; padding: 18px 28px; border-bottom: 1px solid var(--border-color); }
+.hours-summary-row:last-child { border-bottom: none; }
+.hours-summary-day { font-size: 17px; font-weight: 700; color: var(--sub-text); }
+.hours-summary-time { font-size: 20px; font-weight: 800; color: var(--main-orange); letter-spacing: -0.5px; }
+.hours-summary-time.off { color: var(--main-text); }
 
 /* ========================================================= */
 /* 5. 8칸 그리드 (숫자 아이콘) */
@@ -319,9 +321,10 @@ footer { background-color: var(--footer-bg); padding: 60px 0 40px 0; color: var(
     }
 
     /* 시간 강조 텍스트 */
-    .time-text-highlight { margin-top: 8vw !important; gap: 2vw !important; }
-    .time-text-highlight strong { font-size: 8.5vw !important; }
-    .time-text-highlight p { font-size: 4.8vw !important; }
+    .hours-summary { margin-top: 8vw !important; max-width: 90vw; }
+    .hours-summary-row { padding: 4vw 6vw !important; }
+    .hours-summary-day { font-size: 3.8vw !important; }
+    .hours-summary-time { font-size: 4.5vw !important; }
 
     /* 레이아웃 여백 비율(vw)로 변경 */
     .snap-section { padding: 12vw 0 6vw 0 !important; }
