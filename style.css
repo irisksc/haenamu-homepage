@@ -213,8 +213,9 @@ header { display: flex; justify-content: space-between; align-items: center; pad
 .doctor-name { font-size: 32px; font-weight: 800; color: var(--main-text); margin: 0 0 20px 0; letter-spacing: -1px; }
 .doctor-desc { font-size: 17px; color: var(--sub-text); line-height: 1.7; margin-bottom: 30px; }
 .doctor-history { list-style: none; padding: 0; margin: 0; }
-.doctor-history li { display: flex; align-items: flex-start; gap: 10px; font-size: 16px; color: var(--sub-text); margin-bottom: 12px; line-height: 1.5; }
+.doctor-history li { display: flex; align-items: flex-start; gap: 10px; font-size: 16px; color: var(--sub-text); margin-bottom: 12px; line-height: 1.5; text-align: left; }
 .doctor-history li::before { content: ""; flex-shrink: 0; width: 6px; height: 6px; margin-top: 0.6em; background-color: var(--main-orange); border-radius: 50%; }
+.doctor-history li span { flex: 1; text-align: left; }
 
 /* ========================================================= */
 /* 7. 진료안내 표 / 오시는 길 / 주차안내 */
