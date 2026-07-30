@@ -267,13 +267,15 @@ td { color: var(--sub-text); }
 /* ========================================================= */
 /* 8. 플로팅 버튼들 */
 /* ========================================================= */
-.naver-floating { position: fixed; right: 40px; bottom: 110px; font-weight: 800; font-size: 16px; padding: 15px 0; width: 180px; border-radius: 30px; box-shadow: 0 10px 20px rgba(0,0,0,0.15); display: flex; align-items: center; justify-content: center; gap: 8px; text-decoration: none; z-index: 9999; transition: all 0.3s ease; background-color: #03C75A; color: #fff; }
-.naver-floating:hover { transform: translateY(-5px); box-shadow: 0 15px 30px rgba(0,0,0,0.25); }
+.kakao-floating { position: fixed; right: 32px; bottom: 106px; width: 60px; height: 60px; border-radius: 50%; overflow: hidden; box-shadow: 0 8px 20px rgba(0,0,0,0.2); text-decoration: none; z-index: 9999; transition: all 0.3s ease; display: block; }
+.kakao-floating img { width: 100%; height: 100%; object-fit: cover; display: block; }
+.kakao-floating:hover { transform: translateY(-4px); box-shadow: 0 12px 24px rgba(0,0,0,0.28); }
 
-.phone-floating { position: fixed; right: 40px; bottom: 40px; font-weight: 800; font-size: 16px; padding: 15px 0; width: 180px; border-radius: 30px; box-shadow: 0 10px 20px rgba(0,0,0,0.15); display: flex; align-items: center; justify-content: center; gap: 8px; text-decoration: none; z-index: 9999; transition: all 0.3s ease; background-color: var(--main-orange); color: #fff; }
-.phone-floating:hover { transform: translateY(-5px); box-shadow: 0 15px 30px rgba(0,0,0,0.25); background-color: var(--dark-orange); }
+.phone-floating { position: fixed; right: 32px; bottom: 32px; width: 60px; height: 60px; border-radius: 50%; box-shadow: 0 8px 20px rgba(0,0,0,0.2); display: flex; align-items: center; justify-content: center; text-decoration: none; z-index: 9999; transition: all 0.3s ease; background-color: var(--main-orange); color: #fff; font-size: 26px; }
+.phone-floating span.floating-label { display: none; }
+.phone-floating:hover { transform: translateY(-4px); box-shadow: 0 12px 24px rgba(0,0,0,0.28); background-color: var(--dark-orange); }
 
-.top-btn { position: fixed; right: 40px; bottom: 180px; width: 50px; height: 50px; background-color: var(--box-bg); color: var(--sub-text); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 24px; font-weight: bold; box-shadow: 0 5px 15px rgba(0,0,0,0.1); text-decoration: none; z-index: 9998; border: 1px solid var(--border-color); opacity: 0; visibility: hidden; transition: all 0.3s ease; }
+.top-btn { position: fixed; right: 32px; bottom: 180px; width: 50px; height: 50px; background-color: var(--box-bg); color: var(--sub-text); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 24px; font-weight: bold; box-shadow: 0 5px 15px rgba(0,0,0,0.1); text-decoration: none; z-index: 9998; border: 1px solid var(--border-color); opacity: 0; visibility: hidden; transition: all 0.3s ease; }
 .top-btn:hover { transform: translateY(-5px); box-shadow: 0 10px 20px rgba(0,0,0,0.15); color: var(--main-orange); border-color: var(--main-orange); }
 
 /* ========================================================= */
@@ -437,9 +439,9 @@ footer { background-color: var(--footer-bg); padding: 60px 0 40px 0; color: var(
     .parking-card h4 { justify-content: flex-start; }
 
 /* 아이폰 하단바(노치) 침범 완벽 방지 및 버튼 간격 넉넉하게 띄우기 */
-    .phone-floating { bottom: calc(30px + env(safe-area-inset-bottom)) !important; right: 20px !important; width: 150px !important; padding: 12px 0 !important; font-size: 15px !important; }
-    .naver-floating { bottom: calc(95px + env(safe-area-inset-bottom)) !important; right: 20px !important; width: 150px !important; padding: 12px 0 !important; font-size: 15px !important; }
-    .top-btn { right: 20px !important; bottom: calc(160px + env(safe-area-inset-bottom)) !important; width: 45px !important; height: 45px !important; font-size: 20px !important; }
+    .phone-floating { bottom: calc(20px + env(safe-area-inset-bottom)) !important; right: 16px !important; width: 52px !important; height: 52px !important; font-size: 22px !important; }
+    .kakao-floating { bottom: calc(80px + env(safe-area-inset-bottom)) !important; right: 16px !important; width: 52px !important; height: 52px !important; }
+    .top-btn { right: 16px !important; bottom: calc(140px + env(safe-area-inset-bottom)) !important; width: 42px !important; height: 42px !important; font-size: 18px !important; }
 
     /* 모바일 푸터 */
     footer { padding: 8vw 5vw; text-align: left; }
