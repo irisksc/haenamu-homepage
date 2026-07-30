@@ -382,7 +382,7 @@ footer { background-color: var(--footer-bg); padding: 60px 0 40px 0; color: var(
     }
 
     /* 모바일 구조 설정 유지 */
-    header { padding: 0 5vw; height: 18vw; flex-direction: column; justify-content: center; }
+    header { padding: 0 5vw; height: 18vw; flex-direction: column; justify-content: center; align-items: flex-start; }
     .logo-area { font-size: 6vw; gap: 2vw; }
     .logo-area img { height: 10vw; transform: none; }
     .main-nav { display: none; }
