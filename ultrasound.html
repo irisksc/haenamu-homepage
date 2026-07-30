@@ -23,7 +23,28 @@
             <a href="index.html#location" class="nav-link">오시는 길</a>
             <a href="ultrasound.html" class="nav-btn active">초음파약침</a>
         </nav>
+        <button class="hamburger-btn" id="hamburgerBtn" aria-label="메뉴 열기">
+            <span></span><span></span><span></span>
+        </button>
     </header>
+
+    <div class="mobile-nav-overlay" id="mobileNavOverlay">
+        <div class="mobile-nav-header">
+            <a href="index.html" class="logo-area">
+                <img src="images/logo.jpg" alt="시흥 해나무한의원 로고">
+                시흥 해나무한의원
+            </a>
+            <button class="mobile-nav-close" id="mobileNavClose" aria-label="메뉴 닫기">&times;</button>
+        </div>
+        <div class="mobile-nav-list">
+            <a href="index.html#philosophy">진료철학</a>
+            <a href="index.html#doctors">의료진 소개</a>
+            <a href="index.html#subjects-summary">진료과목</a>
+            <a href="index.html#hours">진료시간</a>
+            <a href="index.html#location">오시는 길</a>
+            <a href="ultrasound.html">초음파약침</a>
+        </div>
+    </div>
 
     <section class="snap-section hero" style="padding-top: 140px; padding-bottom: 40px;">
         <div class="hero-overlay"></div>
@@ -237,5 +258,28 @@
     <a href="tel:031-315-7533" class="phone-floating">
         <span style="font-size:18px;">📞</span> 전화 문의하기
     </a>
+
+    <script>
+        var hamburgerBtn = document.getElementById('hamburgerBtn');
+        var mobileNavOverlay = document.getElementById('mobileNavOverlay');
+        var mobileNavClose = document.getElementById('mobileNavClose');
+
+        function openMobileNav() {
+            mobileNavOverlay.classList.add('open');
+            document.body.style.overflow = 'hidden';
+        }
+        function closeMobileNav() {
+            mobileNavOverlay.classList.remove('open');
+            document.body.style.overflow = '';
+        }
+
+        if (hamburgerBtn) hamburgerBtn.addEventListener('click', openMobileNav);
+        if (mobileNavClose) mobileNavClose.addEventListener('click', closeMobileNav);
+        if (mobileNavOverlay) {
+            mobileNavOverlay.querySelectorAll('a').forEach(function(link) {
+                link.addEventListener('click', closeMobileNav);
+            });
+        }
+    </script>
 </body>
 </html>
