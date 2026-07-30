@@ -311,12 +311,8 @@
             <div class="content-wrapper" style="padding: 0; gap: 40px;">
                 <div class="img-box">
                     <div class="custom-map-wrap">
-                        <iframe
-                            src="https://maps.google.com/maps?q=%EA%B2%BD%EA%B8%B0%EB%8F%84%20%EC%8B%9C%ED%9D%A5%EC%8B%9C%20%EC%8B%A0%ED%98%84%EB%A1%9C%2014%EB%B2%88%EA%B8%B8%202&z=17&output=embed"
-                            style="width: 100%; height: 100%; border: 0;"
-                            loading="lazy"
-                            title="시흥 해나무한의원 지도"></iframe>
-                        <a href="https://naver.me/G0pkUUOa" target="_blank" class="custom-map-overlay" style="pointer-events: auto; background: transparent; align-items: flex-end; justify-content: flex-end; padding: 16px;">
+                        <div id="naverMap" style="width: 100%; height: 100%;"></div>
+                        <a href="https://naver.me/FoE5uovf" target="_blank" class="custom-map-overlay" style="pointer-events: auto; background: transparent; align-items: flex-end; justify-content: flex-end; padding: 16px;">
                             <span>네이버길찾기 바로가기</span>
                         </a>
                     </div>
@@ -404,7 +400,31 @@
         &uarr;
     </a>
 
+    <script src="https://oapi.map.naver.com/openapi/v3/maps.js?ncpClientId=x0rhklt5st&submodules=geocoder"></script>
     <script>
+        (function() {
+            var mapEl = document.getElementById('naverMap');
+            if (!mapEl || typeof naver === 'undefined' || !naver.maps) return;
+
+            var fallbackCenter = new naver.maps.LatLng(37.4478, 126.7368);
+            var map = new naver.maps.Map('naverMap', {
+                center: fallbackCenter,
+                zoom: 17
+            });
+            var marker = new naver.maps.Marker({ position: fallbackCenter, map: map });
+
+            if (naver.maps.Service) {
+                naver.maps.Service.geocode({ query: '경기도 시흥시 신현로 14번길 2' }, function(status, response) {
+                    if (status !== naver.maps.Service.Status.OK) return;
+                    var items = response.v2.addresses;
+                    if (!items || !items.length) return;
+                    var point = new naver.maps.LatLng(items[0].y, items[0].x);
+                    map.setCenter(point);
+                    marker.setPosition(point);
+                });
+            }
+        })();
+
         window.addEventListener('scroll', function() {
             var topBtn = document.getElementById('topBtn');
             if (window.scrollY > 300) {
