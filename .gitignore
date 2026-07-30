@@ -2,6 +2,7 @@
 # dropped into images/ (raw source photos, stray files, etc.)
 images/*
 !images/logo.jpg
+!images/logo-icon.png
 !images/doctor-kwon.jpg
 !images/ultrasound-example-01.jpg
 !images/ultrasound-example-02.jpg

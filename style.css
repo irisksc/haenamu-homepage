@@ -55,8 +55,8 @@ html { touch-action: manipulation; }
 /* 2. 공통 헤더 */
 /* ========================================================= */
 header { display: flex; justify-content: space-between; align-items: center; padding: 0 60px; background-color: var(--header-bg); border-bottom: 1px solid var(--border-color); position: fixed; top: 0; width: 100%; z-index: 999; height: 90px; backdrop-filter: blur(5px); transition: background-color 0.3s; }
-.logo-area { display: flex; align-items: center; gap: 12px; font-size: 28px; color: var(--main-text); text-decoration: none; font-family: 'GangwonEdu_OTFBoldA', sans-serif; }
-.logo-area img { height: 65px; transform: translateY(-4px); }
+.logo-area { display: flex; align-items: center; gap: 12px; font-size: 28px; color: var(--main-text); text-decoration: none; font-family: 'Pretendard', sans-serif; font-weight: 800; }
+.logo-area img { height: 50px; }
 
 .main-nav { display: flex; align-items: center; gap: 32px; }
 .main-nav .nav-link { color: var(--main-text); text-decoration: none; font-size: 16px; font-weight: 700; transition: color 0.3s; }
